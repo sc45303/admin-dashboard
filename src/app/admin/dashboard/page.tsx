@@ -330,6 +330,7 @@ export default function AdminDashboard() {
       )
       .then((data) => {
         // Map _id to id for easier reference and force cartItems to be an empty array if missing.
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const mappedData = (data || []).map((order: any) => ({
           id: order._id,
           ...order,
