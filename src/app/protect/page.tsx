@@ -13,7 +13,7 @@ export default function ProtectedRoute({
   useEffect(() => {
     const isloggedIn = localStorage.getItem("isLoggedIn");
     if (!isloggedIn) {
-      router.push("/admin/dashboard");
+      router.push("https://admin-dashboard-by-sk.vercel.app");
     }
   }, [router]);
   return <>| {children}</>;
